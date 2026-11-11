@@ -1,0 +1,113 @@
+:root {
+  --bg-dark: #0a0b0e;
+  --card-dark: rgba(18, 20, 28, 0.94);
+  --border-color: #212631;
+  --accent-purple: #7928ca;
+  --accent-purple-hover: #8a3ffc;
+  --text-light: #f0f6fc;
+  --text-muted: #8b949e;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  /* Fundo da fachada mais claro, revelando a imagem com elegância */
+  background: linear-gradient(rgba(10, 11, 14, 0.45), rgba(10, 11, 14, 0.65)),
+              url('fachada.png') center/cover no-repeat fixed;
+  color: var(--text-light);
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Tela de Login */
+.login-wrapper {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.login-card {
+  background-color: var(--card-dark);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 40px;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.85);
+}
+
+.login-logo {
+  max-width: 140px;
+  max-height: 80px;
+  object-fit: contain;
+}
+
+.form-control {
+  background-color: #0d1117;
+  border: 1px solid var(--border-color);
+  color: var(--text-light);
+  padding: 12px 16px;
+  border-radius: 8px;
+}
+
+.form-control:focus {
+  background-color: #0d1117;
+  border-color: var(--accent-purple);
+  color: var(--text-light);
+  box-shadow: none;
+}
+
+.input-group .form-control {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.btn-toggle-pass {
+  background-color: #0d1117;
+  border: 1px solid var(--border-color);
+  color: var(--text-muted);
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.btn-toggle-pass:hover {
+  background-color: #161b22;
+  color: var(--text-light);
+  border-color: var(--border-color);
+}
+
+.btn-login {
+  background-color: var(--accent-purple);
+  border: none;
+  color: white;
+  padding: 12px;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: background-color 0.2s;
+}
+
+.btn-login:hover {
+  background-color: var(--accent-purple-hover);
+}
+
+.bg-card {
+  background-color: var(--card-dark);
+}
+
+.border-custom {
+  border: 1px solid var(--border-color);
+}
+
+.badge.bg-purple {
+  background-color: var(--accent-purple);
+}
+
+/* Ajuste de legibilidade para o rodapé do card de login */
+.text-muted {
+  color: #a0aec0 !important;
+  font-size: 0.8rem;
+}
